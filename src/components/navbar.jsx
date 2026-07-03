@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../styles/navbar.css'
 
 export default function Navbar() {
@@ -6,23 +6,52 @@ export default function Navbar() {
 		<nav className="site-nav">
 			<ul>
 				<li>
-					<Link to="/inicio">Inicio</Link>
+					<NavLink
+						to="/inicio"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Inicio
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/institucional">Institucional</Link>
+					<NavLink
+						to="/institucional"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Institucional
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/servicios">Servicios</Link>
-
+					<NavLink
+						to="/servicios"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Servicios
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/personal-de-salud">Personal de Salud</Link>
+					<NavLink
+						to="/personal-de-salud"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Personal de Salud
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/contrataciones">Contrataciones</Link>
+					<NavLink
+						to="/contrataciones"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Contrataciones
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/transparencia">Transparencia</Link>
+					<NavLink
+						to="/transparencia"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Transparencia
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
