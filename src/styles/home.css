@@ -1,0 +1,16 @@
+.home {
+  background-color: rgb(238, 167, 167);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home h2 {
+  color: #223f5c;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  color: #dc6161;
+  line-height: 1.6;
+}
