@@ -1,7 +1,12 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1a1a24;
+  background-color: #ffffff;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #ffffff;
 }
 
 .main-footer {
@@ -9,6 +14,7 @@ body {
   color: #b3b3b3;
   padding: 50px 30px 25px;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 .footer-container {
