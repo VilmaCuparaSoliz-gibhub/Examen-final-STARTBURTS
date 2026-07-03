@@ -16,6 +16,7 @@
 
 .site-nav li {
   margin: 0;
+  position: relative;
 }
 
 .site-nav a {
@@ -24,6 +25,39 @@
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   transition: background-color 0.3s ease;
+}
+
+.submenu-container {
+  cursor: pointer;
+}
+
+.institucional-dropdown {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.institucional-dropdown a {
+  padding: 0.65rem 1rem;
+  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.institucional-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.institucional-dropdown a:hover {
+  background: #f8f9fc;
+  color: #c10811;
 }
 
 .site-nav a:hover {

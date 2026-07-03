@@ -11,7 +11,15 @@ import Servicios from './pages/servicios'
 import PersonalDeSalud from './pages/personal-de-salud'
 import Contrataciones from './pages/contrataciones'
 import Transparencia from './pages/transparecia'
+<<<<<<< HEAD
 import Auditoria from "./components/transparencia/auditoria";
+=======
+import DatosGenerales from './components/institucionalidad/datos-generales'
+import SituacionGeografica from './components/institucionalidad/situacion-geografica'
+import PlantelEjecutivo from './components/institucionalidad/plantel-ejecutivo'
+import EstructuraOrganica from './components/institucionalidad/estructura-organica'
+import Directorio from './components/institucionalidad/directorio'
+>>>>>>> 0f4d6a2 (clonen para institucionalidad)
 
 function App() {
   return (
@@ -24,7 +32,14 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/about" element={<About />} />
-          <Route path="/institucional" element={<Institucional />} />
+          <Route path="/institucional" element={<Institucional />}>
+            <Route index element={<DatosGenerales />} />
+            <Route path="datos-generales" element={<DatosGenerales />} />
+            <Route path="situacion-geografica" element={<SituacionGeografica />} />
+            <Route path="plantel-ejecutivo" element={<PlantelEjecutivo />} />
+            <Route path="estructura-organica" element={<EstructuraOrganica />} />
+            <Route path="directorio" element={<Directorio />} />
+          </Route>
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/personal-de-salud" element={<PersonalDeSalud />} />
           <Route path="/contrataciones" element={<Contrataciones />} />
