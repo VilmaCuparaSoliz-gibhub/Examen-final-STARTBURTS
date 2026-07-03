@@ -11,6 +11,7 @@ import Servicios from './pages/servicios'
 import PersonalDeSalud from './pages/personal-de-salud'
 import Contrataciones from './pages/contrataciones'
 import Transparencia from './pages/transparecia'
+import Auditoria from "./components/transparencia/auditoria";
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
           <Route path="/personal-de-salud" element={<PersonalDeSalud />} />
           <Route path="/contrataciones" element={<Contrataciones />} />
           <Route path="/transparencia" element={<Transparencia />} />
+          <Route
+  path="/transparencia/auditoria"
+  element={<Auditoria />}
+/>
         </Routes>
       </main>
       <Footer />
