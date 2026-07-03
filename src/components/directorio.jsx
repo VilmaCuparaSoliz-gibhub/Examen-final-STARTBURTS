@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../../styles/institucional/directorio.css'
+import '../styles/directorio.css'
 
 const miembros = [
 	{

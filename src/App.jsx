@@ -5,7 +5,9 @@ import Footer from './components/footer'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about'
-
+import PlantelEjecutivo from './components/institucionalidad/plantel-ejecutivo.jsx'
+import EstructuraOrganica from './components/institucionalidad/estructura-organica.jsx'
+import Directorio from './components/institucionalidad/directorio.jsx'
 function App() {
   return (
     <>
@@ -16,6 +18,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/ejemplo" element={<PlantelEjecutivo />} />
+          <Route path="/estructura-organica" element={<EstructuraOrganica />} />
+          <Route path="/directorio" element={<Directorio />} />
         </Routes>
       </main>
       <Footer />

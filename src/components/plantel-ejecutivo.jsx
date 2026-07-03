@@ -1,4 +1,4 @@
-import '../../styles/plantel-ejecutivo.css'
+import '../styles/plantel-ejecutivo.css'
 
 export default function PlantelEjecutivo() {
 	return (
@@ -19,7 +19,7 @@ export default function PlantelEjecutivo() {
 					<div className="caja">
 						<span className="rol">Gerente General</span>
 						<div className="foto">
-							<img src="/img/gerente.png" alt="Gerente General" />
+							<img src="/img/gerente.jpg" alt="Gerente General" />
 						</div>
 					</div>
 				</div>
@@ -33,7 +33,7 @@ export default function PlantelEjecutivo() {
 							<div className="caja">
 								<span className="rol">Jefatura Médica</span>
 								<div className="foto">
-									<img src="/img/jefe_medico.png" alt="Jefatura Médica" />
+									<img src="/img/jefatura-medica.jpg" alt="Jefatura Médica" />
 								</div>
 							</div>
 						</div>
@@ -43,7 +43,7 @@ export default function PlantelEjecutivo() {
 							<div className="caja">
 								<span className="rol">Jefatura Recursos Humanos</span>
 								<div className="foto">
-									<img src="/img/encargada_rrhh.png" alt="Jefatura Recursos Humanos" />
+									<img src="/img/jefatura-rrhh.jpg" alt="Jefatura Recursos Humanos" />
 								</div>
 							</div>
 						</div>
@@ -53,7 +53,7 @@ export default function PlantelEjecutivo() {
 							<div className="caja">
 								<span className="rol">Jefatura Servicios Generales</span>
 								<div className="foto">
-									<img src="/img/jefe_servicios_generales.png" alt="Jefatura Servicios Generales" />
+									<img src="/img/jefatura-sg.jpg" alt="Jefatura Servicios Generales" />
 								</div>
 							</div>
 						</div>
