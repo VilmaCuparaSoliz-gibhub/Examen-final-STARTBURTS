@@ -1,19 +1,15 @@
 import { useState } from 'react'
-<<<<<<< HEAD
-import { NavLink } from 'react-router-dom'
-import '../styles/navbar.css'
-
-export default function Navbar() {
-	const [mostrarTransparencia, setMostrarTransparencia] = useState(false)
-=======
 import { NavLink, Link } from 'react-router-dom'
 import '../styles/navbar.css'
 
 export default function Navbar() {
 	const [showInstitucionalMenu, setShowInstitucionalMenu] = useState(false)
+	const [showTransparenciaMenu, setShowTransparenciaMenu] = useState(false)
 
-	const closeMenu = () => setShowInstitucionalMenu(false)
->>>>>>> 0f4d6a2 (clonen para institucionalidad)
+	const closeMenu = () => {
+		setShowInstitucionalMenu(false)
+		setShowTransparenciaMenu(false)
+	}
 
 	return (
 		<nav className="site-nav">
@@ -27,34 +23,52 @@ export default function Navbar() {
 						Inicio
 					</NavLink>
 				</li>
-<<<<<<< HEAD
 
-				<li>
-=======
 				<li className="submenu-container">
->>>>>>> 0f4d6a2 (clonen para institucionalidad)
 					<NavLink
 						to="/institucional"
 						className={({ isActive }) => (isActive ? 'active-link' : '')}
-						onClick={() => setShowInstitucionalMenu(prev => !prev)}
+						onClick={() =>
+							setShowInstitucionalMenu(!showInstitucionalMenu)
+						}
 					>
 						Institucional
 					</NavLink>
+
 					{showInstitucionalMenu && (
 						<div className="institucional-dropdown">
-							<Link to="/institucional/datos-generales" onClick={closeMenu}>
+							<Link
+								to="/institucional/datos-generales"
+								onClick={closeMenu}
+							>
 								Datos Generales
 							</Link>
-							<Link to="/institucional/situacion-geografica" onClick={closeMenu}>
+
+							<Link
+								to="/institucional/situacion-geografica"
+								onClick={closeMenu}
+							>
 								Situación Geográfica
 							</Link>
-							<Link to="/institucional/plantel-ejecutivo" onClick={closeMenu}>
+
+							<Link
+								to="/institucional/plantel-ejecutivo"
+								onClick={closeMenu}
+							>
 								Plantel Ejecutivo
 							</Link>
-							<Link to="/institucional/estructura-organica" onClick={closeMenu}>
+
+							<Link
+								to="/institucional/estructura-organica"
+								onClick={closeMenu}
+							>
 								Estructura Orgánica
 							</Link>
-							<Link to="/institucional/directorio" onClick={closeMenu}>
+
+							<Link
+								to="/institucional/directorio"
+								onClick={closeMenu}
+							>
 								Directorio
 							</Link>
 						</div>
@@ -90,41 +104,29 @@ export default function Navbar() {
 						Contrataciones
 					</NavLink>
 				</li>
-<<<<<<< HEAD
 
-				<li className="dropdown">
-					<button
-						type="button"
-						className="dropdown-title"
-						onClick={() =>
-							setMostrarTransparencia(!mostrarTransparencia)
-						}
-=======
-				<li>
+				<li className="submenu-container">
 					<NavLink
 						to="/transparencia"
 						className={({ isActive }) => (isActive ? 'active-link' : '')}
-						onClick={closeMenu}
->>>>>>> 0f4d6a2 (clonen para institucionalidad)
+						onClick={() =>
+							setShowTransparenciaMenu(!showTransparenciaMenu)
+						}
 					>
-						Transparencia ▼
-					</button>
+						Transparencia
+					</NavLink>
 
-					{mostrarTransparencia && (
-						<ul className="dropdown-menu">
-							<li>
-								<NavLink
-									to="/transparencia/auditoria"
-									className={({ isActive }) =>
-										isActive ? 'active-link' : ''
-									}
-								>
-									Auditoría
-								</NavLink>
-							</li>
+					{showTransparenciaMenu && (
+						<div className="institucional-dropdown">
+							<Link
+								to="/transparencia/auditoria"
+								onClick={closeMenu}
+							>
+								Auditoría
+							</Link>
 
-							{/* Tus compañeros agregarán aquí sus opciones */}
-						</ul>
+							{/* Aquí tus compañeros agregarán sus opciones */}
+						</div>
 					)}
 				</li>
 			</ul>

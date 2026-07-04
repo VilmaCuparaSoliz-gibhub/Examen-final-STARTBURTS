@@ -11,15 +11,12 @@ import Servicios from './pages/servicios'
 import PersonalDeSalud from './pages/personal-de-salud'
 import Contrataciones from './pages/contrataciones'
 import Transparencia from './pages/transparecia'
-<<<<<<< HEAD
 import Auditoria from "./components/transparencia/auditoria";
-=======
 import DatosGenerales from './components/institucionalidad/datos-generales'
 import SituacionGeografica from './components/institucionalidad/situacion-geografica'
 import PlantelEjecutivo from './components/institucionalidad/plantel-ejecutivo'
 import EstructuraOrganica from './components/institucionalidad/estructura-organica'
 import Directorio from './components/institucionalidad/directorio'
->>>>>>> 0f4d6a2 (clonen para institucionalidad)
 
 function App() {
   return (
