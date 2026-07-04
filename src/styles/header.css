@@ -31,11 +31,14 @@
 }
 
 .header-title-center h1 {
-  color: #0d2c74;
-  font-size: 28px;
-  font-weight: bold;
+  color: #282181;
+  font-size: 38px;
+  font-weight: 700;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif,100;
+  line-height: 1.05;
 }
 
 .header-logo-right {
@@ -49,6 +52,7 @@
   width: 75px;
   height: auto;
   object-fit: contain;
+  
 }
 
 .header-sub-links {
@@ -65,7 +69,8 @@
    ========================================== */
 .dropdown-siguenos {
   position: relative;
-  display: inline-block;
+  display: flex;
+flex-direction: row;
 }
 
 .dropdown-toggle-btn {
@@ -76,6 +81,7 @@
   font-size: 13px;
   cursor: pointer;
   padding: 5px 0;
+  
 }
 
 /* Caja azul oscuro idéntica a tu foto */
@@ -85,7 +91,7 @@
   top: 100%;
   right: 50%;
   transform: translateX(50%);
-  background-color: #0a183d; /* Fondo azul noche de tu foto */
+  background-color: #04248b; /* Fondo azul noche de tu foto */
   padding: 12px;
   min-width: 130px;
   z-index: 100;
@@ -111,7 +117,7 @@
 }
 
 .btn-facebook {
-  background-color: #1a3375; /* Bloque azul marino */
+  background-color: #13062b; /* Bloque azul marino */
 }
 
 .btn-youtube {
@@ -364,14 +370,13 @@
     font-size:14px;
 }
 .top-header{
-    background:#042955;
+    background:#282181;
     color:#fff;
-    height:35px;
+    height:38px;
     display:flex;
-    justify-content:space-around;
-    align-items:start;
-    font-size:12px;
-    font-weight:500;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .top-header a{
@@ -379,5 +384,19 @@
     text-decoration:none;
     font-weight:bold;
     
+}
+.aplicativos{
+  margin-left: auto;
+}
+.top-left{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.top-right{
+    display:flex;
+    gap:25px;
+    align-items:center;
 }
 

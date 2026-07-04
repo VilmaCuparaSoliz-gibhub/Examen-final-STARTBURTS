@@ -13,6 +13,8 @@ const Header = () => {
         
         <span>📧 ssupotosi@gmail.com</span>
         <span>Calle Calama N° 107</span>
+        </div>
+        <div className='top-right'>
         <a href="#">APLICATIVOS</a>
     </div>
 </div>
@@ -30,7 +32,9 @@ const Header = () => {
 
         {/* Título Central */}
         <div className="header-title-center">
-          <h1>SEGURO SOCIAL UNIVERSITARIO POTOSÍ</h1>
+          <h1>SEGURO SOCIAL 
+            <br/>
+            UNIVERSITARIO POTOSÍ</h1>
         </div>
 
         {/* Bloque Derecho */}
@@ -110,7 +114,7 @@ const Header = () => {
 
             {/* Recuadro Rojo de Horarios */}
             <div className="horarios-banner-rojo">
-              <h3>RESERVA DE ATENCIÓN 2023!!!</h3>
+              <h3>RESERVA DE ATENCIÓN 2026!!!</h3>
               <p className="dias">LUNES A VIERNES</p>
               <p>Asegurados de 19:30 a 20:00</p>
               <p>Estudiantes de 20:00 a 20:30</p>
