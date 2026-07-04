@@ -12,7 +12,7 @@ export default function Navbar() {
 	}
 
 	return (
-		<nav className="site-nav">
+	<nav className="site-nav">
 			<ul>
 				<li>
 					<NavLink
@@ -75,6 +75,7 @@ export default function Navbar() {
 					)}
 				</li>
 
+<<<<<<< HEAD
 				<li>
 					<NavLink
 						to="/servicios"
@@ -83,16 +84,19 @@ export default function Navbar() {
 					>
 						Servicios
 					</NavLink>
+=======
+				{/* CAMBIA SOLO ESTE LI */}
+				<li className="dropdown">
+					<Link to="/institucional">Institucional</Link>
+					<ul className="dropdown-content">
+						<li><Link to="/institucional/datos-generales">Datos Generales</Link></li>
+						<li><Link to="/institucional/situacion-geografica">Situación Geográfica</Link></li>
+					</ul>
+>>>>>>> 881ae9e (subiendo mi parte de institucional)
 				</li>
 
 				<li>
-					<NavLink
-						to="/personal-de-salud"
-						className={({ isActive }) => (isActive ? 'active-link' : '')}
-						onClick={closeMenu}
-					>
-						Personal de Salud
-					</NavLink>
+					<Link to="/servicios">Servicios</Link>
 				</li>
 
 				<li>
@@ -130,6 +134,6 @@ export default function Navbar() {
 					)}
 				</li>
 			</ul>
-		</nav>
+	</nav>
 	)
 }

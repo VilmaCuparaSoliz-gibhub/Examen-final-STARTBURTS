@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     import "../../styles/transparencia/auditoria.css";
 
     export default function Auditoria() {
@@ -48,3 +49,16 @@
         </section>
     );
     }
+=======
+import React from 'react'
+
+function Auditoria() {
+  return (
+    <div>
+      <h3>Auditoría</h3>
+    </div>
+  )
+}
+
+export default Auditoria
+>>>>>>> 881ae9e (subiendo mi parte de institucional)
