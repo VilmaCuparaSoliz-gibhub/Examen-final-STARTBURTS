@@ -1,0 +1,43 @@
+.auditoria{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.auditoria h1{
+    text-align:center;
+    color:#003366;
+    margin-bottom:30px;
+}
+
+.auditoria h2{
+    color:#003366;
+    margin-top:30px;
+}
+
+.panel{
+    border:1px solid #0d6efd;
+    border-radius:8px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+.panel h3{
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+    margin:0;
+}
+
+.panel p{
+    padding:15px;
+    margin:0;
+}
+
+.panel a{
+    display:inline-block;
+    margin:15px;
+    color:red;
+    font-weight:bold;
+    text-decoration:none;
+}

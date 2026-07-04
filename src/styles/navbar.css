@@ -1,6 +1,9 @@
 .site-nav {
-  background-color: #37d8dd;
+  border-top: 4px ridge #f11919;
+  background-color: white;
   padding: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .site-nav ul {
@@ -13,16 +16,178 @@
 
 .site-nav li {
   margin: 0;
+  position: relative;
 }
 
 .site-nav a {
   display: block;
-  color: white;
+  color: rgb(2, 46, 58);
   text-decoration: none;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   transition: background-color 0.3s ease;
 }
 
-.site-nav a:hover {
-  background-color: #2c3e50;
+.submenu-container {
+  cursor: pointer;
 }
+
+.institucional-dropdown {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.institucional-dropdown a {
+  padding: 0.65rem 1rem;
+  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.institucional-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.institucional-dropdown a:hover {
+  background: #f8f9fc;
+  color: #c10811;
+}
+
+.site-nav a:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+
+.site-nav a.active-link {
+  color: rgb(236, 5, 5);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #f11919;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+<<<<<<< HEAD
+/* ===== Menú desplegable ===== */
+
+.dropdown {
+  position: relative;
+}
+
+/* Botón Transparencia */
+.dropdown-title {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: rgb(2, 46, 58);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-title:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+
+/* Menú oculto */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+
+  min-width: 220px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  z-index: 999;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: rgb(2, 46, 58);
+  background-color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+=======
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  background: #009688;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li a {
+  color: rgb(16, 16, 16);
+  padding: 14px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.site-nav li a:hover {
+  background: #00796b;
+}
+
+/* ESTO ES LO IMPORTANTE PARA QUE SE DESPLIEGUE */
+.site-nav .dropdown {
+  position: relative;
+}
+
+.site-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 230px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.site-nav .dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+}
+
+.site-nav .dropdown-content li a:hover {
+  background: #f1f1f1;
+}
+
+.site-nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+>>>>>>> 881ae9e (subiendo mi parte de institucional)

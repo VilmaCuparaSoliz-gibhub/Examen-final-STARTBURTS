@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import '../styles/header.css'; 
+import '../styles/header.css'
 
-const Header = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [showReservasModal, setShowReservasModal] = useState(false);
+function Header() {
+	return (
+		<header className="site-header">
+			<div className="hola">holaaaa</div>
+			<h1>Mi Aplicación</h1>
+		</header>
+	)
+}
 
+<<<<<<< HEAD
   return (
     <>
     <div className="top-header">
@@ -151,3 +156,6 @@ const Header = () => {
 export default Header;
 
     
+=======
+export default Header
+>>>>>>> 6478c97e66798c092e585af17471577f51a3c7e2

@@ -1,13 +1,135 @@
-.site-footer {
-  background-color: #1d7ddd;
-  color: rgb(232, 231, 236);
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
 }
 
-.site-footer p {
-  margin: 0;
-  font-size: 0.9rem;
+#root {
+  min-height: 100vh;
+  background-color: #ffffff;
 }
+
+.main-footer {
+  background-color: #111116;
+  color: #b3b3b3;
+  padding: 50px 30px 25px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.contact-item i {
+  color: #d32f2f;
+  margin-right: 14px;
+  margin-top: 2px;
+  font-size: 16px;
+  width: 15px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.footer-section--wide {
+  grid-column: span 2;
+}
+
+.mail-container {
+  padding-left: 29px;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 30px;
+}
+
+.services-list li {
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.highlight-link {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.contact-item a:hover,
+.services-list li:hover {
+  color: #d32f2f;
+}
+
+.clickable-item {
+  cursor: pointer;
+}
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.footer-bottom {
+  border-top: 1px solid #20202a;
+  padding-top: 25px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+  color: #7e7e8a;
+}
+
+.footer-bottom i {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #9e9eaf;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-section--wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
