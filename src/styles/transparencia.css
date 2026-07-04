@@ -1,0 +1,28 @@
+.transparencia-page {
+	padding: 16px;
+}
+
+.transparencia-options {
+	display: flex;
+	gap: 8px;
+	margin: 12px 0 18px 0;
+	flex-wrap: wrap;
+}
+
+.transparencia-options button {
+	background: #f0f0f0;
+	border: 1px solid #ddd;
+	padding: 8px 12px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.transparencia-options button.active {
+	background: #0366d6;
+	color: white;
+	border-color: #0256b3;
+}
+
+.transparencia-content {
+	margin-top: 12px;
+}
