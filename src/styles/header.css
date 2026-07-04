@@ -1,0 +1,12 @@
+.site-header {
+  background-color: #1a7cde;
+  color: rgb(227, 222, 222);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
