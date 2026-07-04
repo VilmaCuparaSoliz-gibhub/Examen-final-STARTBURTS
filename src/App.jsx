@@ -12,6 +12,9 @@ import PersonalDeSalud from './pages/personal-de-salud'
 import Contrataciones from './pages/contrataciones'
 import Transparencia from './pages/transparecia'
 
+import DatosGenerales from './components/institucionalidad/datos-generales'
+import SituacionGeografica from './components/institucionalidad/situacion-geografica'
+
 function App() {
   return (
     <>
@@ -24,6 +27,9 @@ function App() {
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/about" element={<About />} />
           <Route path="/institucional" element={<Institucional />} />
+          <Route path="/institucional/datos-generales"element={<DatosGenerales/>}/>
+          <Route path="/institucional/situacion-geografica"element={<SituacionGeografica />}/>
+
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/personal-de-salud" element={<PersonalDeSalud />} />
           <Route path="/contrataciones" element={<Contrataciones />} />
