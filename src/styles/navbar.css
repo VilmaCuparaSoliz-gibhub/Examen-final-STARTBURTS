@@ -1,11 +1,10 @@
 .site-nav {
   border-top: 4px ridge #f11919;
-  background-color:white;
+  background-color: white;
   padding: 0;
   font-size: 0.9rem;
   font-weight: bold;
 }
-
 
 .site-nav ul {
   list-style: none;
@@ -39,4 +38,73 @@
   text-decoration-color: #f11919;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
+}
+
+/* ===== Menú desplegable ===== */
+
+.dropdown {
+  position: relative;
+}
+
+/* Botón Transparencia */
+.dropdown-title {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: rgb(2, 46, 58);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-title:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+
+/* Menú oculto */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+
+  min-width: 220px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  z-index: 999;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: rgb(2, 46, 58);
+  background-color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
 }
