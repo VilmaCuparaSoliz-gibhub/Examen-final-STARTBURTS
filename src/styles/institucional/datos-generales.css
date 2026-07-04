@@ -1,0 +1,59 @@
+body{
+    margin:0;
+    padding:0;
+}
+root{
+    padding: 0;
+
+}
+main{
+    padding: 0 !important;
+}
+.datos-container {
+  background: white;
+  padding: 30px 0; /* 0 a los lados. Solo arriba y abajo */
+  margin: 0; /* QUITAR MARGEN */
+  border-radius: 0; /* QUITAR BORDES REDONDEADOS */
+  box-shadow: none; /* QUITAR SOMBRA */
+  width: 100%; /* QUE OCUPE TODO EL ANCHO */
+  max-width: 100%; /* FORZAR 100% */
+}
+
+/* PARA QUE EL TEXTO NO CHOQUE CON EL BORDE */
+.datos-container > *:not(.grid-3) {
+  padding: 0 20px; /* SOLO AL TEXTO DE ARRIBA Y ABAJO LE DAMOS AIRE */
+}
+
+/* LAS 3 COLUMNAS PEGADAS */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; /* SIN ESPACIO */
+  margin-top: 20px;
+}
+
+.grid-3 > div {
+  padding: 0 15px; /* AIRECITO SOLO ADENTRO DE CADA COLUMNA */
+}
+
+.titulo-rojo {
+  color: #cc0000;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 20px 0 15px 0;
+}
+
+.texto {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid-3 { grid-template-columns: 1fr; }
+}
