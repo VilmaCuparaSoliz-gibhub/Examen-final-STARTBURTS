@@ -9,10 +9,10 @@ const Header = () => {
     <>
     <div className="top-header">
     <div className="top-left">
-        <span>Emergencias +591-2-6224161</span>
+        <span>📞Emergencias ☎️+591-2-6224161</span>
         
         <span>📧 ssupotosi@gmail.com</span>
-        <span>Calle Calama N° 107</span>
+        <span>📍Calle Calama N° 107</span>
         </div>
         <div className='top-right'>
         <a href="#">APLICATIVOS</a>
