@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import HistorialDeAvisos from '../components/transparencia/historial-de-avisos'
-//import AsesoriaLegal from '../components/transparencia/asesoria-legal'
 import Auditoria from '../components/transparencia/auditoria'
-//import RecursosHumanos from '../components/transparencia/recursos-humanos'
 import '../styles/transparencia.css'
 
 function Transparencia() {

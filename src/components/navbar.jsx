@@ -75,25 +75,7 @@ export default function Navbar() {
 					)}
 				</li>
 
-<<<<<<< HEAD
-				<li>
-					<NavLink
-						to="/servicios"
-						className={({ isActive }) => (isActive ? 'active-link' : '')}
-						onClick={closeMenu}
-					>
-						Servicios
-					</NavLink>
-=======
-				{/* CAMBIA SOLO ESTE LI */}
-				<li className="dropdown">
-					<Link to="/institucional">Institucional</Link>
-					<ul className="dropdown-content">
-						<li><Link to="/institucional/datos-generales">Datos Generales</Link></li>
-						<li><Link to="/institucional/situacion-geografica">Situación Geográfica</Link></li>
-					</ul>
->>>>>>> 881ae9e (subiendo mi parte de institucional)
-				</li>
+
 
 				<li>
 					<Link to="/servicios">Servicios</Link>
