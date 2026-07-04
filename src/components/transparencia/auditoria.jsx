@@ -8,22 +8,19 @@
 
         <h2>Gestión 2026</h2>
 
-        <div className="panel">
-            <h3>Resumen Ejecutivo</h3>
+<div className="panel">
+  <h3>Resumen Ejecutivo</h3>
 
-            <p>
-            Informe de Auditoría Interna Nº IUAI 01/2026,
-            INFORME SOBRE LA CONFIABILIDAD DE REGISTROS...
-            </p>
+  <div className="panel-body">
+    <p>
+          Informe de Auditoría Interna Nº IUAI 01/2026, INFORME SOBRE LA CONFIABILIDAD DE REGISTROS, Y LOS ASPECTOS DE CONTROL INTERNO RELACIONADOS, EMERGENTES DE LA AUDITORÍA DE CONFIABILIDAD DE REGISTROS Y ESTADOS FINANCIEROS DEL SEGURO SOCIAL UNIVERSITARIO POTOSÍ, GESTIÓN 2025
+    </p>
 
-            <a
-            href="/informes/archivos_auditoria/2026/RESUMEN EJECUTIVO (1).pdf"
-            target="_blank"
-            rel="noreferrer"
-            >
-            Descargar PDF
-            </a>
-        </div>
+    <a href="...">
+      Descargar PDF
+    </a>
+  </div>
+</div>
 
         <div className="panel">
             <h3>Resumen Ejecutivo</h3>
