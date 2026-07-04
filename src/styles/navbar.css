@@ -1,11 +1,10 @@
 .site-nav {
   border-top: 4px ridge #f11919;
-  background-color:white;
+  background-color: white;
   padding: 0;
   font-size: 0.9rem;
   font-weight: bold;
 }
-
 
 .site-nav ul {
   list-style: none;
@@ -74,3 +73,121 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
+
+<<<<<<< HEAD
+/* ===== Menú desplegable ===== */
+
+.dropdown {
+  position: relative;
+}
+
+/* Botón Transparencia */
+.dropdown-title {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: rgb(2, 46, 58);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-title:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+
+/* Menú oculto */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+
+  min-width: 220px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  z-index: 999;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: rgb(2, 46, 58);
+  background-color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+=======
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  background: #009688;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li a {
+  color: rgb(16, 16, 16);
+  padding: 14px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.site-nav li a:hover {
+  background: #00796b;
+}
+
+/* ESTO ES LO IMPORTANTE PARA QUE SE DESPLIEGUE */
+.site-nav .dropdown {
+  position: relative;
+}
+
+.site-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 230px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.site-nav .dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+}
+
+.site-nav .dropdown-content li a:hover {
+  background: #f1f1f1;
+}
+
+.site-nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+>>>>>>> 881ae9e (subiendo mi parte de institucional)

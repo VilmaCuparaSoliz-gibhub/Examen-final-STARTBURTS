@@ -1,0 +1,38 @@
+.titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.subtitulo,
+.subtitulo2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Imágenes del historial: tamaño uniforme y recorte consistente */
+.img {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+.imgb {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .transparencia-content img {
+    height: 200px;
+  }
+}
