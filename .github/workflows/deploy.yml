@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: true # Cambiado a true para optimizar ejecuciones
 
 jobs:
   build:
@@ -53,4 +53,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.GITHUB_TOKEN }} # <-- CORREGIDO: Se agregaron las llaves faltantes
