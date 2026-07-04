@@ -2,7 +2,6 @@
 	padding: 40px 50px 60px;
 	background: #ffffff;
 }
-
 .plantel-ejecutivo .titulo {
 	text-align: right;
 	font-size: 2.4rem;
@@ -12,7 +11,6 @@
 	text-transform: uppercase;
 	margin-bottom: 40px;
 }
-
 .plantel-ejecutivo .organigrama {
 	display: flex;
 	flex-direction: column;
@@ -20,8 +18,6 @@
 	max-width: 680px;
 	margin: 0 auto;
 }
-
-/* ── Recuadro: borde rojo fino ── */
 .plantel-ejecutivo .caja {
 	border: 1.5px solid #cc0000;
 	background: #fff;
@@ -32,7 +28,6 @@
 	cursor: pointer;
 	transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .plantel-ejecutivo .caja .rol {
 	font-size: 0.7rem;
 	font-weight: bold;
@@ -53,15 +48,12 @@
 	color: #003366;
 	background-color: rgba(0, 51, 102, 0.06);
 }
-
-/* ── Foto retrato: sin estirar ── */
 .plantel-ejecutivo .foto {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
 	aspect-ratio: 3 / 4;
 }
-
 .plantel-ejecutivo .foto img {
 	width: 100%;
 	height: 100%;
@@ -71,7 +63,6 @@
 	background: #e8e8e8;
 	transition: transform 0.3s ease;
 }
-
 .plantel-ejecutivo .foto::after {
 	content: '';
 	position: absolute;
@@ -81,45 +72,33 @@
 	transition: opacity 0.3s ease;
 	pointer-events: none;
 }
-
 .plantel-ejecutivo .caja:hover .foto::after {
 	opacity: 1;
 }
-
 .plantel-ejecutivo .caja:hover .foto img {
 	transform: scale(1.02);
 }
-
-/* ── Nivel 1: Directorio ── */
 .plantel-ejecutivo .nivel-1 .caja {
 	width: 130px;
 }
-
 .plantel-ejecutivo .nivel-1 .caja .rol {
 	padding: 10px 8px;
 }
-
-/* ── Líneas rojas ── */
 .plantel-ejecutivo .linea-v {
 	width: 2px;
 	height: 32px;
 	background: #cc0000;
 	flex-shrink: 0;
 }
-
-/* ── Nivel 2: Gerente General ── */
 .plantel-ejecutivo .nivel-2 .caja {
 	width: 145px;
 }
-
-/* ── Nivel 3: jefaturas ── */
 .plantel-ejecutivo .rama {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
 }
-
 .plantel-ejecutivo .rama-fila {
 	display: flex;
 	justify-content: center;
@@ -127,7 +106,6 @@
 	position: relative;
 	gap: 24px;
 }
-
 .plantel-ejecutivo .rama-fila::before {
 	content: '';
 	position: absolute;
@@ -137,14 +115,12 @@
 	height: 2px;
 	background: #cc0000;
 }
-
 .plantel-ejecutivo .columna {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 145px;
 }
-
 .plantel-ejecutivo .columna .linea-v {
 	height: 32px;
 }

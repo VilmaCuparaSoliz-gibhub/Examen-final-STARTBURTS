@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../styles/navbar.css'
 
 export default function Navbar() {
@@ -6,13 +6,52 @@ export default function Navbar() {
 		<nav className="site-nav">
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<NavLink
+						to="/inicio"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Inicio
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<NavLink
+						to="/institucional"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Institucional
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/ejemplo">Ejemplo</Link>
+					<NavLink
+						to="/servicios"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Servicios
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						to="/personal-de-salud"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Personal de Salud
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						to="/contrataciones"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Contrataciones
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						to="/transparencia"
+						className={({ isActive }) => (isActive ? 'active-link' : '')}
+					>
+						Transparencia
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
