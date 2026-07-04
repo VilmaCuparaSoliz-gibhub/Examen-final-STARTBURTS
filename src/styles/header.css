@@ -1,12 +1,401 @@
-.site-header {
-  background-color: #1a7cde;
-  color: rgb(227, 222, 222);
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/**/
+#main-header-body {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  border-bottom: 4px solid #b7094c; /* Línea roja inferior exacta */
 }
 
-.site-header h1 {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.img-logo-ssu {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+}
+
+.header-title-center {
+  text-align: center;
+}
+
+.header-title-center h1 {
+  color: #282181;
+  font-size: 38px;
+  font-weight: 700;
   margin: 0;
-  font-size: 2rem;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif,100;
+  line-height: 1.05;
+}
+
+.header-logo-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.img-escudo {
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+  
+}
+
+.header-sub-links {
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  align-items: center;
+}
+
+
+/* ==========================================
+   2. ESTILOS DEL DESPLEGABLE (SÍGUENOS)
+   ========================================== */
+.dropdown-siguenos {
+  position: relative;
+  display: flex;
+flex-direction: row;
+}
+
+.dropdown-toggle-btn {
+  background: none;
+  border: none;
+  color: #b7094c; /* Texto guindo de Síguenos */
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 5px 0;
+  
+}
+
+/* Caja azul oscuro idéntica a tu foto */
+.dropdown-social-content {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #04248b; /* Fondo azul noche de tu foto */
+  padding: 12px;
+  min-width: 130px;
+  z-index: 100;
+  border: 1px solid #060f27;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-social-content.show {
+  display: flex;
+}
+
+.dropdown-social-content a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  border-radius: 2px;
+}
+
+.btn-facebook {
+  background-color: #13062b; /* Bloque azul marino */
+}
+
+.btn-youtube {
+  background-color: #b31010; /* Bloque rojo */
+}
+
+
+/* ==========================================
+   3. ESTILOS DE LA VENTANA EMERGENTE (RESERVAS)
+   ========================================== */
+.link-azul-btn {
+  background: none;
+  border: none;
+  color: #0d2c74; /* Texto azul de Reservas */
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.link-azul-btn:hover {
+  text-decoration: underline;
+}
+
+/* Telón oscuro de fondo */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Tarjeta de login con marca de agua sutil */
+.login-card-container {
+  background-color: #ffffff;
+  background-image: linear-gradient(rgba(255,255,255,0.91), rgba(255,255,255,0.91)), url('/img/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Recuadro Rojo de Horarios */
+.horarios-banner-rojo {
+  background-color: #b7094c;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.horarios-banner-rojo h3 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.horarios-banner-rojo p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.horarios-banner-rojo .dias {
+  font-weight: bold;
+}
+
+/* Formulario */
+.login-form-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group-reserva label {
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group-reserva input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Botón ingresar transparente con borde azul */
+.btn-ingresar-reserva {
+  background-color: transparent;
+  color: #0d2c74;
+  border: 1px solid #0d2c74;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.session-expire-text {
+  color: #7f8c8d;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+/* ==========================
+   CONVOCATORIAS
+========================== */
+
+.convocatorias-link{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:8px;
+    text-decoration:none;
+}
+
+.img-convocatorias{
+    width:100px;
+    height:auto;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.img-convocatorias:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   LOGO DERECHO
+========================== */
+
+.header-logo-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.img-escudo{
+    width:95px;
+    margin-bottom:8px;
+}
+
+/* ==========================
+   ENLACES
+========================== */
+
+.header-sub-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+}
+
+.link-azul-btn{
+    color:#0d2c74;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    background:none;
+    border:none;
+}
+
+.link-azul-btn:hover{
+    color:#b7094c;
+}
+
+.dropdown-toggle-btn{
+    color:#b7094c;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    background:none;
+    border:none;
+}
+
+.dropdown-toggle-btn:hover{
+    color:#0d2c74;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+.header-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.header-logo-right{
+    margin-top:20px;
+}
+
+.header-sub-links{
+    justify-content:center;
+}
+
+.header-title-center h1{
+    font-size:22px;
+}
+
+}
+.top-header{
+    background:#0d47a1;
+    color:white;
+    height:35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 20px;
+    font-size:14px;
+}
+.top-header{
+    background:#282181;
+    color:#fff;
+    height:38px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-header a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    
+}
+.aplicativos{
+  margin-left: auto;
+}
+.top-left{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.top-right{
+    display:flex;
+    gap:25px;
+    align-items:center;
 }

@@ -1,11 +1,10 @@
 .site-nav {
   border-top: 4px ridge #f11919;
-  background-color:white;
+  background-color: white;
   padding: 0;
   font-size: 0.9rem;
   font-weight: bold;
 }
-
 
 .site-nav ul {
   list-style: none;
@@ -17,6 +16,7 @@
 
 .site-nav li {
   margin: 0;
+  position: relative;
 }
 
 .site-nav a {
@@ -25,6 +25,39 @@
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   transition: background-color 0.3s ease;
+}
+
+.submenu-container {
+  cursor: pointer;
+}
+
+.institucional-dropdown {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.institucional-dropdown a {
+  padding: 0.65rem 1rem;
+  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.institucional-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.institucional-dropdown a:hover {
+  background: #f8f9fc;
+  color: #c10811;
 }
 
 .site-nav a:hover {
@@ -39,4 +72,73 @@
   text-decoration-color: #f11919;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
+}
+
+/* ===== Menú desplegable ===== */
+
+.dropdown {
+  position: relative;
+}
+
+/* Botón Transparencia */
+.dropdown-title {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: rgb(2, 46, 58);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-title:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
+}
+
+/* Menú oculto */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+
+  min-width: 220px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  z-index: 999;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: rgb(2, 46, 58);
+  background-color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #dde3ea;
+  color: rgb(225, 4, 4);
 }
