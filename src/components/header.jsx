@@ -48,7 +48,7 @@ const Header = () => {
   {/* Convocatorias */}
   <a href="/convocatorias" className="convocatorias-link">
     <img
-      src="/img/convocatorias.png"
+      src="/img/convocatorias.jpg"
       alt="Convocatorias"
       className="img-convocatorias"
     />
