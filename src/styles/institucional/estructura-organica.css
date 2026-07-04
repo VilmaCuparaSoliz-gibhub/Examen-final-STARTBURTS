@@ -1,0 +1,37 @@
+.estructura-organizacional {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	background: #ffffff;
+	padding: 40px;
+}
+.estructura-organizacional .imagen-link {
+	display: block;
+	margin: 40px;
+	position: relative;
+	max-width: 95%;
+	cursor: pointer;
+}
+.estructura-organizacional .imagen-link img {
+	width: 100%;
+	height: auto;
+	display: block;
+	transition: filter 0.3s ease;
+}
+.estructura-organizacional .imagen-link::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 51, 102, 0.45);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+.estructura-organizacional .imagen-link:hover::after,
+.estructura-organizacional .imagen-link:active::after {
+	opacity: 1;
+}
+.estructura-organizacional .imagen-link:hover img,
+.estructura-organizacional .imagen-link:active img {
+	filter: brightness(0.85);
+}

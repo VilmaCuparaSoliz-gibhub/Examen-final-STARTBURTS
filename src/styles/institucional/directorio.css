@@ -1,0 +1,101 @@
+.directorio {
+	padding: 40px 30px 60px;
+	background: #ffffff;
+}
+.directorio .titulo {
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: bold;
+	color: #003366;
+	text-decoration: underline;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+.directorio .organigrama {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.directorio .caja {
+	border: 1.5px solid #a0522d;
+	background: #fff;
+	color: #1a1a1a;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.72rem;
+	font-weight: normal;
+	text-align: center;
+	line-height: 1.35;
+	padding: 12px 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.directorio .caja:hover {
+	border-color: #003366;
+}
+.directorio .caja.activo {
+	background-color: #003366;
+	border-color: #003366;
+	color: #ffffff;
+}
+.directorio .caja-presidente {
+	width: 420px;
+	min-height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.directorio .columna .caja {
+	width: 155px;
+	min-height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.directorio .columna:nth-child(3) .caja,
+.directorio .columna:nth-child(5) .caja {
+	min-height: 155px;
+}
+.directorio .linea-v {
+	width: 2px;
+	height: 30px;
+	background: #cc0000;
+	flex-shrink: 0;
+}
+.directorio .rama {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.directorio .rama-fila {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	gap: 16px;
+}
+
+.directorio .rama-fila::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 77px;
+	right: 77px;
+	height: 2px;
+	background: #cc0000;
+}
+
+.directorio .columna {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 155px;
+}
+
+.directorio .columna .linea-v {
+	height: 30px;
+}
