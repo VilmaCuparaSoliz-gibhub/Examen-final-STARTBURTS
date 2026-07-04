@@ -2,6 +2,7 @@
 	padding: 40px 50px 60px;
 	background: #ffffff;
 }
+
 .plantel-ejecutivo .titulo {
 	text-align: right;
 	font-size: 2.4rem;
@@ -11,32 +12,42 @@
 	text-transform: uppercase;
 	margin-bottom: 40px;
 }
+
 .plantel-ejecutivo .organigrama {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 680px;
+	max-width: 720px;
 	margin: 0 auto;
 }
+
+/* ── Cuadro perfecto con borde rojo ── */
 .plantel-ejecutivo .caja {
+	width: 160px;
+	height: 160px;
 	border: 1.5px solid #cc0000;
 	background: #fff;
 	text-align: center;
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
-	align-items: stretch;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 8px;
+	box-sizing: border-box;
 	cursor: pointer;
 	transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .plantel-ejecutivo .caja .rol {
-	font-size: 0.7rem;
+	font-size: 0.62rem;
 	font-weight: bold;
-	color: #000;
+	color: #333;
 	text-transform: uppercase;
-	padding: 8px 6px;
-	line-height: 1.3;
-	letter-spacing: 0.3px;
-	transition: color 0.3s ease, background-color 0.3s ease;
+	padding: 2px 4px 6px;
+	line-height: 1.25;
+	letter-spacing: 0.2px;
+	flex-shrink: 0;
+	transition: color 0.3s ease;
 }
 
 .plantel-ejecutivo .caja:hover {
@@ -46,81 +57,105 @@
 
 .plantel-ejecutivo .caja:hover .rol {
 	color: #003366;
-	background-color: rgba(0, 51, 102, 0.06);
 }
+
+/* ── Foto cuadrada con espacio blanco alrededor ── */
 .plantel-ejecutivo .foto {
 	position: relative;
-	overflow: hidden;
+	flex: 1;
 	width: 100%;
-	aspect-ratio: 3 / 4;
+	padding: 8px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 0;
 }
+
 .plantel-ejecutivo .foto img {
 	width: 100%;
 	height: 100%;
+	aspect-ratio: 1 / 1;
 	display: block;
 	object-fit: cover;
 	object-position: top center;
 	background: #e8e8e8;
 	transition: transform 0.3s ease;
 }
+
 .plantel-ejecutivo .foto::after {
 	content: '';
 	position: absolute;
-	inset: 0;
+	top: 8px;
+	left: 8px;
+	right: 8px;
+	bottom: 8px;
 	background-color: rgba(0, 51, 102, 0.4);
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	pointer-events: none;
 }
+
 .plantel-ejecutivo .caja:hover .foto::after {
 	opacity: 1;
 }
+
 .plantel-ejecutivo .caja:hover .foto img {
 	transform: scale(1.02);
 }
+
+/* ── Nivel 1: Directorio (cuadro sin foto) ── */
 .plantel-ejecutivo .nivel-1 .caja {
 	width: 130px;
+	height: 130px;
+	justify-content: center;
 }
+
 .plantel-ejecutivo .nivel-1 .caja .rol {
-	padding: 10px 8px;
+	padding: 8px;
+	font-size: 0.7rem;
 }
+
+/* ── Líneas rojas ── */
 .plantel-ejecutivo .linea-v {
 	width: 2px;
 	height: 32px;
 	background: #cc0000;
 	flex-shrink: 0;
 }
-.plantel-ejecutivo .nivel-2 .caja {
-	width: 145px;
-}
+
+/* ── Nivel 3: tres jefaturas ── */
 .plantel-ejecutivo .rama {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
 }
+
 .plantel-ejecutivo .rama-fila {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	position: relative;
-	gap: 24px;
+	gap: 28px;
 }
+
 .plantel-ejecutivo .rama-fila::before {
 	content: '';
 	position: absolute;
 	top: 0;
-	left: 72px;
-	right: 72px;
+	left: 80px;
+	right: 80px;
 	height: 2px;
 	background: #cc0000;
 }
+
 .plantel-ejecutivo .columna {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 145px;
 }
+
 .plantel-ejecutivo .columna .linea-v {
 	height: 32px;
 }

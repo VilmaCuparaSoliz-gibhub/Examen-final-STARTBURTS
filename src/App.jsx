@@ -10,12 +10,7 @@ import Institucional from './pages/institucional'
 import Servicios from './pages/servicios'
 import PersonalDeSalud from './pages/personal-de-salud'
 import Contrataciones from './pages/contrataciones'
-<<<<<<< HEAD
-import Transparencia from './pages/transparecia'
-import Auditoria from "./components/transparencia/auditoria";
-=======
 import Transparencia from './pages/transparencia'
->>>>>>> 881ae9e (subiendo mi parte de institucional)
 import DatosGenerales from './components/institucionalidad/datos-generales'
 import SituacionGeografica from './components/institucionalidad/situacion-geografica'
 import PlantelEjecutivo from './components/institucionalidad/plantel-ejecutivo'
@@ -33,6 +28,15 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/institucional" element={<Institucional />} />
+          <Route path="/institucional" element={<Institucional />}>
+            <Route index element={<DatosGenerales />} />
+            <Route path="datos-generales" element={<DatosGenerales />} />
+            <Route path="situacion-geografica" element={<SituacionGeografica />} />
+            <Route path="plantel-ejecutivo" element={<PlantelEjecutivo />} />
+            <Route path="estructura-organica" element={<EstructuraOrganica />} />
+            <Route path="directorio" element={<Directorio />} />
+          </Route>
           <Route path="/institucional" element={<Institucional />} />
           <Route path="/institucional/datos-generales" element={<DatosGenerales/>}/>
           <Route path="/institucional/situacion-geografica" element={<SituacionGeografica />}/>

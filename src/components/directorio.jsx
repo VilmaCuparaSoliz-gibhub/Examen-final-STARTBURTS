@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import { useState } from 'react'
-import '../../styles/institucional/directorio.css'
+import '../styles/directorio.css'
 
 const miembros = [
 	{
@@ -74,15 +73,3 @@ export default function Directorio() {
 		</section>
 	)
 }
-=======
-function Directorio() {
-  return (
-    <section className="institucional-section directorio">
-      <h3>Directorio</h3>
-      <p>Información de contacto del personal y áreas de la institución.</p>
-    </section>
-  )
-}
-
-export default Directorio
->>>>>>> ba10e89ac474be4cf1a78ba587a8e62323a9f463
