@@ -1,10 +1,14 @@
-import React, { useState } from 'react' // Importados los hooks necesarios
+import React, { useState } from 'react'
 import '../styles/header.css'
 
 function Header() {
-  // Declaración de los estados necesarios para que funcionen los botones
   const [showReservasModal, setShowReservasModal] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Funciones nativas de Vite para resolver las rutas físicas en producción
+  const getImgUrl = (name) => {
+    return new URL(`../assets/img/${name}`, import.meta.url).href;
+  };
 
   return (
     <>
@@ -27,7 +31,11 @@ function Header() {
           {/* Logo Izquierdo (SSU) */}
           <div className="header-logo-left">
             <a href="/">
-              <img src="/img/logo.png" alt="Logo SSU" className="img-logo-ssu" />
+              <img 
+                src={getImgUrl('logo.png')} 
+                alt="Logo SSU" 
+                className="img-logo-ssu" 
+              />
             </a>
           </div>
 
@@ -39,7 +47,7 @@ function Header() {
           {/* Bloque Derecho */}
           <div className="header-logo-right">
             <img
-              src="/img/Escudo_de_Bolivia.png"
+              src={getImgUrl('Escudo_de_Bolivia.png')}
               alt="Escudo de Bolivia"
               className="img-escudo"
             />
@@ -47,7 +55,7 @@ function Header() {
             {/* Convocatorias */}
             <a href="/convocatorias" className="convocatorias-link">
               <img
-                src="/img/convocatorias.jpg"
+                src={getImgUrl('convocatorias.jpg')}
                 alt="Convocatorias"
                 className="img-convocatorias"
               />
@@ -73,7 +81,7 @@ function Header() {
 
                 <div className={`dropdown-social-content ${dropdownOpen ? "show" : ""}`}>
                   <a
-                    href="https://facebook.com/ssupotosi"
+                    href="https://facebook.com"
                     target="_blank"
                     rel="noreferrer"
                     className="btn-facebook"
@@ -81,7 +89,7 @@ function Header() {
                     Facebook
                   </a>
                   <a
-                    href="https://www.youtube.com/channel/UC2ymp6s2JzbrkGlnIpv9lbg"
+                    href="https://youtube.com"
                     target="_blank"
                     rel="noreferrer"
                     className="btn-youtube"
@@ -99,10 +107,8 @@ function Header() {
         {showReservasModal && (
           <div className="modal-overlay" onClick={() => setShowReservasModal(false)}>
             <div className="login-card-container" onClick={(e) => e.stopPropagation()}>
-              {/* Botón X para cerrar */}
               <button className="close-modal-btn" onClick={() => setShowReservasModal(false)}>✕</button>
 
-              {/* Recuadro Rojo de Horarios */}
               <div className="horarios-banner-rojo">
                 <h3>RESERVA DE ATENCIÓN 2026!!!</h3>
                 <p className="dias">LUNES A VIERNES</p>
@@ -110,7 +116,6 @@ function Header() {
                 <p>Estudiantes de 20:00 a 20:30</p>
               </div>
 
-              {/* Formulario de Login */}
               <form className="login-form-reserva" onSubmit={(e) => e.preventDefault()}>
                 <div className="form-group-reserva">
                   <label>USUARIO</label>
@@ -125,7 +130,6 @@ function Header() {
                 <button type="submit" className="btn-ingresar-reserva">INGRESAR</button>
               </form>
 
-              {/* Mensaje de expiración inferior */}
               <p className="session-expire-text">
                 Señor usuario su sesión acaba de expirar, por favor vuelva a introducir sus credenciales de acceso.
               </p>
@@ -135,6 +139,6 @@ function Header() {
       </header>
     </>
   );
-} // Aquí es donde verdaderamente se debe cerrar el componente Header
+}
 
 export default Header;
