@@ -1,4 +1,8 @@
+import React from 'react'
 import '../../styles/institucional/estructura-organica.css'
+
+// CORREGIDO: Añadimos un "../" extra para poder llegar correctamente a assets
+import organigramaImg from '../../assets/img/organigrama.png'
 
 function EstructuraOrganica() {
   return (
@@ -7,13 +11,13 @@ function EstructuraOrganica() {
       <p>Mapa organizacional y distribución de áreas funcionales.</p>
       
       <a
-        href="/img/organigrama.png"
+        href={organigramaImg}
         className="imagen-link"
         target="_blank"
         rel="noreferrer"
       >
         <img
-          src="/img/organigrama.png"
+          src={organigramaImg}
           alt="Estructura Organizacional"
         />
       </a>
