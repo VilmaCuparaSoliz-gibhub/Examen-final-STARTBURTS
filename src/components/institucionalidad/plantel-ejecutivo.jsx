@@ -1,4 +1,11 @@
+import React from 'react'
 import '../../styles/plantel-ejecutivo.css'
+
+// CORREGIDO: Dos niveles de puntos para ir directo de components/ a assets/
+import gerenteImg from '../../assets/oscar_lafuente.png'
+import jefeMedicoImg from '../../assets/jerson_arancibia.jpg'
+import rrhhImg from '../../assets/elena_bravo.jpg'
+import serviciosGenImg from '../../assets/grinez_rocio.jpg'
 
 function PlantelEjecutivo() {
   return (
@@ -19,7 +26,7 @@ function PlantelEjecutivo() {
           <div className="caja">
             <span className="rol">Gerente General</span>
             <div className="foto">
-              <img src="../assets/img/gerente.png" alt="Gerente General" />
+              <img src={gerenteImg} alt="Gerente General" />
             </div>
           </div>
         </div>
@@ -32,7 +39,7 @@ function PlantelEjecutivo() {
               <div className="caja">
                 <span className="rol">Jefatura Médica</span>
                 <div className="foto">
-                  <img src="../assets/img/jefe_medico.png" alt="Jefatura Médica" />
+                  <img src={jefeMedicoImg} alt="Jefatura Médica" />
                 </div>
               </div>
             </div>
@@ -42,7 +49,7 @@ function PlantelEjecutivo() {
               <div className="caja">
                 <span className="rol">Jefatura Recursos Humanos</span>
                 <div className="foto">
-                  <img src="../assets/img/encargada_rrhh.png" alt="Jefatura Recursos Humanos" />
+                  <img src={rrhhImg} alt="Jefatura Recursos Humanos" />
                 </div>
               </div>
             </div>
@@ -52,7 +59,7 @@ function PlantelEjecutivo() {
               <div className="caja">
                 <span className="rol">Jefatura Servicios Generales</span>
                 <div className="foto">
-                  <img src="../assets/img/jefe_servicios_generales.png" alt="Jefatura Servicios Generales" />
+                  <img src={serviciosGenImg} alt="Jefatura Servicios Generales" />
                 </div>
               </div>
             </div>
