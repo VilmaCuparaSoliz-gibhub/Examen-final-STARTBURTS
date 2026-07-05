@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "especialidad": "Medicina General",
+    "medico": "Dr. Alfredo Acha",
+    "atencion": "Lunes a Viernes",
+    "consultorio": "Consultorio Nº 3"
+  },
+  {
+    "id": 2,
+    "especialidad": "Ecografía y Diagnóstico",
+    "medico": "Dr. Jerson Arancibia",
+    "atencion": "Martes y Jueves",
+    "consultorio": "Sala de Imagenología"
+  },
+  {
+    "id": 3,
+    "especialidad": "Pediatría y Control Infantil",
+    "medico": "Dra. Melva Magne",
+    "atencion": "Lunes, Miércoles y Viernes",
+    "consultorio": "Consultorio Nº 7 (Bloque B)"
+  }
+]

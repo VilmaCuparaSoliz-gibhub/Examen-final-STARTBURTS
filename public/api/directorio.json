@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "oficina": "Dirección General Executive",
+    "encargado": "Dr. Oscar Lafuente",
+    "interno": "101",
+    "email": "olafuente@ssupotosi.gob.bo"
+  },
+  {
+    "id": 2,
+    "oficina": "Administración y Finanzas",
+    "encargado": "Lic. Melva Magne",
+    "interno": "102",
+    "email": "mmagne@ssupotosi.gob.bo"
+  },
+  {
+    "id": 3,
+    "oficina": "Recursos Humanos",
+    "encargado": "Dra. Elena Bravo",
+    "interno": "105",
+    "email": "ebravo@ssupotosi.gob.bo"
+  },
+  {
+    "id": 4,
+    "oficina": "Caja y Afiliaciones",
+    "encargado": "Sra. Rocio Grinez",
+    "interno": "110",
+    "email": "afiliaciones@ssupotosi.gob.bo"
+  }
+]
